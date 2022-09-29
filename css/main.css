@@ -14,6 +14,11 @@ h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
 }
 
+h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
 .container {
   max-width: 1080px;
   margin: 0 auto;
@@ -21,7 +26,13 @@ h6 {
 }
 
 img {
-  width: 100%;
+  width: 98%;
+  border: 10px solid silver;
+  box-shadow: 0px 0px 6px 0px #000;
+}
+
+.main-nav {
+  margin: 18px 0;
 }
 
 .main-nav ul {
@@ -35,6 +46,11 @@ img {
 .main-nav ul li {
   flex: 1;
   text-align: center;
+  padding: 10px;
+  border: 1px solid #000;
+  margin: 2px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 2px 0px black;
 }
 
 .main-nav ul li a {
@@ -42,6 +58,16 @@ img {
   color: inherit;
   text-decoration: none;
   font-size: 1.25rem;
+}
+
+.main-nav ul li:hover {
+  background-color: black;
+  color: white;
+  box-shadow: none;
+}
+
+.owner ul li a{
+  color: black;
 }
 
 form input,
@@ -59,13 +85,45 @@ form textarea {
   resize: none;
 }
 
+form label {
+  margin-bottom: 5px;
+  display: block;
+}
+
 form button {
   background: none;
   border: 2px solid black;
-  padding: 1rem;
+  padding: 1rem 2rem;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: black;
+  color: white;
 }
 
 .site-footer {
   padding: 2rem 0;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  background-color: red;
+  color: white;
+  padding: 10px;
+}
+
+.skip:focus {
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
 }
